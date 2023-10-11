@@ -1,0 +1,7 @@
+<template>
+    <lightning-card>
+    <lightning-input label="Enter Pokemon Name" value={userInput} onchange={handleInputChange}></lightning-input>
+    <lightning-button label="Submit" variant="brand" onclick={handleInputChange}></lightning-button>
+    <c-pokedetails pokemon-name={userInput}></c-pokedetails>
+    </lightning-card>
+</template>

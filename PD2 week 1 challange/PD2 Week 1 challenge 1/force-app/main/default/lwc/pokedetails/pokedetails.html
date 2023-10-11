@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Pokemon Info">
+        <div if:true={pokemonData}>
+            <div class="slds-m-top_x-small">
+            <img src={pokemonData.sprites.front_default} alt={pokemonData.name} /><p></p>
+            
+            <lightning-badge label="Name" class="slds-badge_inverse"></lightning-badge> {pokemonData.name}<p></p>
+            <lightning-badge label="Abilities" class="slds-badge_inverse"></lightning-badge> {abilitiesList}<p></p>
+            <lightning-badge label="Moves" class="slds-badge_inverse"></lightning-badge> {movesList}<p></p>
+            </div>
+        </div>
+        <div if:true={error}>
+            <p>{error}</p>
+        </div>
+    </lightning-card>
+</template>
+
+
